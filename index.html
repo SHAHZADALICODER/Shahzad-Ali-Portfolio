@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahzad Ali's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        .profile {
+            text-align: center;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .profile h1 {
+            margin: 0.5rem 0;
+        }
+        .skills, .contact {
+            margin: 2rem 0;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li {
+            background-color: #333;
+            color: #fff;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shahzad Ali's Portfolio</h1>
+    </header>
+    <div class="container">
+        <div class="profile">
+            <h1>SHAHZAD ALI</h1>
+            <p>Unity Games and Apps Developer | Android Studio | Kodular | Sketchware | Simple Websites</p>
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li onclick="scrollToOrderForm()">Unity Game Development</li>
+                <li onclick="scrollToOrderForm()">Android Studio</li>
+                <li onclick="scrollToOrderForm()">Kodular</li>
+                <li onclick="scrollToOrderForm()">Sketchware</li>
+                <li onclick="scrollToOrderForm()">Simple Website Design</li>
+            </ul>
+            <script>
+                function scrollToOrderForm() {
+                    document.querySelector('.order-form').scrollIntoView({ behavior: 'smooth' });
+                }
+            </script>
+            <style>
+                .skills li:hover {
+                    background-color: #555;
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    transition: transform 0.3s ease;
+                }
+            </style>
+        </div>
+        <div class="contact">
+            <h2>Contact</h2>
+            <p>Email: shahgaming360@gmail.com</p>
+        </div>
+    </div>
+    <div class="order-form">
+        <h2>Order Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="phone">Phone Number (Whatsapp):</label>
+            <input type="tel" id="phone" name="phone" required>
+            <br>
+            <input type="submit" value="Submit">
+        <script>
+            document.querySelector('.order-form form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const formData = new FormData(this);
+                const mailtoLink = `mailto:shahgaming360@gmail.com?subject=Order Form Submission&body=${encodeURIComponent(
+                    `Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\nPhone: ${formData.get('phone')}`
+                )}`;
+                window.location.href = mailtoLink;
+            });
+        </script>
+        </form>
+        <p>Shahzad Ali says: I will contact you as soon as possible to discuss your order. Thank you!</p>
+        <p>🔒 100% Trusted and Secure 🔒</p>
+    </div>
+    <style>
+        .order-form {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 5rem; /* Add margin to avoid being hidden by the footer */
+        }
+        .order-form h2 {
+            color: #333;
+        }
+        .order-form label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+        }
+        .order-form input[type="text"],
+        .order-form input[type="email"],
+        .order-form input[type="tel"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .order-form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .order-form input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+    <footer>
+        <p>🎉New Year Offer: Get 60% off on all services!🎉</p>
+    </footer>
+</body>
+</html></div>
